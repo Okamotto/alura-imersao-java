@@ -27,12 +27,17 @@ public class App {
 
         // exiibir os dados
         for (Map<String, String> filme : listaDeFilmes) {
+            String star = "";
             String title = "Título: ";
             String image = "Imagem: ";
             String rating = "Avaliação: ";
             System.out.println(title + filme.get("title"));
             System.out.println(image + filme.get("image"));
             System.out.println(rating + filme.get("imDbRating"));
+            for (double i=0.0;i<=Double.parseDouble(filme.get("imDbRating"));i++){
+                star = star + "\u2B50";
+            }
+            System.out.println("Classificação: " + star);
             System.out.println();
         }
     }
